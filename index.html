@@ -9,8 +9,25 @@
 
   <h1>Will you be my Valentine? 💘</h1>
 
-  <button onclick="alert('YAY!! 💖')">Yes</button>
-  <button onclick="alert('Nice try 😅')">No</button>
+<div style="position: relative; height: 200px;">
+  <button id="yes">Yes 💖</button>
+  <button id="no">No 🙃</button>
+</div>
+<script>
+  const noBtn = document.getElementById("no");
+
+  noBtn.addEventListener("mouseover", () => {
+    const x = Math.random() * 200 - 100;
+    const y = Math.random() * 200 - 100;
+
+    noBtn.style.transform = `translate(${x}px, ${y}px)`;
+  });
+
+  document.getElementById("yes").onclick = () => {
+    document.body.innerHTML = "<h1>YAY!! 💖💖💖</h1><p>You’re my Valentine 😍</p>";
+  };
+</script>
 
 </body>
 </html>
+
